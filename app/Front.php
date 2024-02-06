@@ -58,6 +58,25 @@ class Front extends Base {
 	}
 
 	public function add_extra_fields(){
-		echo"Hello";
+		?>
+		<div class="cx-variable-form">
+			<p>Extra filelds</p>
+
+			<button>Extra Fileds <span><i class="fa-solid fa-thumbtack"></i></span> </button>
+
+			<div class="cx-extra-item-1">
+				<input type="radio"  name="extra_fields" value ='1'>
+				<label for="">Item One <span class="cx-extra-item-1-span">+2$</span> </label> <br>
+				<input type="radio" name="extra_fields" value ='1'>
+				<label for="">Item One <span class="cx-extra-item-1-span">+2$</span> </label> <br>
+				<input type="radio" name="extra_fields" value ='1'>
+				<label for="">Item One <span class="cx-extra-item-1-span">+2$</span> </label> <br>
+			</div>
+
+			
+
+		</div>
+		<?php 
+		
 	}
 }
