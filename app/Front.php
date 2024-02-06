@@ -56,4 +56,8 @@ class Front extends Base {
 			<img id="extra-fields-modal-loader" src="' . esc_attr( Extra_Fields_ASSET . '/img/loader.gif' ) . '" />
 		</div>';
 	}
+
+	public function add_extra_fields(){
+		echo"Hello";
+	}
 }

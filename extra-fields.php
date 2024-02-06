@@ -162,6 +162,7 @@ final class Plugin {
 			$front->action( 'wp_head', 'head' );
 			$front->action( 'wp_footer', 'modal' );
 			$front->action( 'wp_enqueue_scripts', 'enqueue_scripts' );
+			$front->action( 'woocommerce_after_variations_table', 'add_extra_fields', 10 );
 
 			/**
 			 * Shortcode related hooks
