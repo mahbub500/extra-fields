@@ -31,7 +31,11 @@ class Front extends Base {
 		$this->version	= $this->plugin['Version'];
 	}
 
-	public function head() {}
+	public function head() {
+		if( isset( $_POST['extra_fields'] )){
+			Helper::pri( 'test' );
+		}	
+	}
 	
 	/**
 	 * Enqueue JavaScripts and stylesheets
@@ -67,7 +71,7 @@ class Front extends Base {
 		<div class="cx-variable-form">
 			<p>Extra filelds</p>
 
-			<button class="cx-extra-button-1">Extra Fileds* <span class='cx-extra-button-span'><i class="fa-solid fa-arrow-up"></i> <i class="fa-solid fa-arrow-down"></i></span> </button>
+			<button class="cx-extra-button-1">Extra Fileds*  </button>
 
 			<div class="cx-extra-item-1"> 
 				<input type="radio"  name="extra_fields" value ='1'>
@@ -78,12 +82,12 @@ class Front extends Base {
 				<label for="">Item One <span class="cx-extra-item-1-span">+2$</span> </label> <br>
 			</div>
 
-			<button class="cx-extra-button-2">accessories* <span class='cx-extra-button-span'><i class="fa-solid fa-arrow-up"></i> <i class="fa-solid fa-arrow-down"></i></span> </button>
+			<button class="cx-extra-button-2">accessories* </button>
 
 			<div class="cx-extra-item-2"> 
-				<input type="checkbox"  name="extra_fields" value ='1'>
+				<input type="checkbox"  name="accessorie-1" value ='1'>
 				<label for="">Long Cable<span class="cx-extra-item-2-span">+55$</span> </label> <br>
-				<input type="checkbox" name="extra_fields" value ='1'>
+				<input type="checkbox" name="accessories-2" value ='1'>
 				<label for="">Type-C Cable<span class="cx-extra-item-2-span">+96$</span> </label> <br>
 				
 			</div>
