@@ -41,7 +41,12 @@ class Front extends Base {
 
 		wp_enqueue_style( $this->slug, plugins_url( "/assets/css/front{$min}.css", Extra_Fields ), '', $this->version, 'all' );
 
+		wp_enqueue_style( 'fontawsome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', '', $this->version, 'all' );
+
 		wp_enqueue_script( $this->slug, plugins_url( "/assets/js/front{$min}.js", Extra_Fields ), [ 'jquery' ], $this->version, true );
+
+		wp_enqueue_script( 'fontawsome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js','', $this->version, true ); 
+		wp_enqueue_script( 'jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js', '', $this->version, true );
 		
 		$localized = [
 			'ajaxurl'	=> admin_url( 'admin-ajax.php' ),
@@ -62,15 +67,25 @@ class Front extends Base {
 		<div class="cx-variable-form">
 			<p>Extra filelds</p>
 
-			<button>Extra Fileds <span><i class="fa-solid fa-thumbtack"></i></span> </button>
+			<button class="cx-extra-button-1">Extra Fileds* <span class='cx-extra-button-span'><i class="fa-solid fa-arrow-up"></i> <i class="fa-solid fa-arrow-down"></i></span> </button>
 
-			<div class="cx-extra-item-1">
+			<div class="cx-extra-item-1"> 
 				<input type="radio"  name="extra_fields" value ='1'>
 				<label for="">Item One <span class="cx-extra-item-1-span">+2$</span> </label> <br>
 				<input type="radio" name="extra_fields" value ='1'>
 				<label for="">Item One <span class="cx-extra-item-1-span">+2$</span> </label> <br>
 				<input type="radio" name="extra_fields" value ='1'>
 				<label for="">Item One <span class="cx-extra-item-1-span">+2$</span> </label> <br>
+			</div>
+
+			<button class="cx-extra-button-2">accessories* <span class='cx-extra-button-span'><i class="fa-solid fa-arrow-up"></i> <i class="fa-solid fa-arrow-down"></i></span> </button>
+
+			<div class="cx-extra-item-2"> 
+				<input type="checkbox"  name="extra_fields" value ='1'>
+				<label for="">Long Cable<span class="cx-extra-item-2-span">+55$</span> </label> <br>
+				<input type="checkbox" name="extra_fields" value ='1'>
+				<label for="">Type-C Cable<span class="cx-extra-item-2-span">+96$</span> </label> <br>
+				
 			</div>
 
 			

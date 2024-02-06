@@ -14,3 +14,22 @@
 #extra-fields-modal-loader {
     position: absolute;
 }
+.cx-variable-form p{
+    margin-bottom: 0px;
+}
+.cx-extra-button-1, .cx-extra-button-2{
+    width: 100%;
+    text-align: left;
+}
+.cx-extra-button-2{
+    
+    margin: 10px 0px;
+}
+.cx-extra-button-span{
+    float: right;
+}
+.cx-extra-item-2-span, .cx-extra-item-1-span{
+    float: right;
+    right: 10%;
+    position: relative;
+}
