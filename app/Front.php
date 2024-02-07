@@ -32,9 +32,23 @@ class Front extends Base {
 	}
 
 	public function head() {
-		if( isset( $_POST['extra_fields'] )){
-			Helper::pri( $_POST['extra_fields'] );
-		}	
+		
+		// require_once( 'path/to/woocommerce/wp-load.php' );
+
+// Product ID
+$product_id = 18;
+
+// New price
+$new_price = 20.99;
+
+// Update product data
+$product_data = array(
+    'regular_price' => $new_price,
+    'sale_price' => $new_price // Set sale price if you want to
+);
+
+// Update product
+// $updated = wc_update_product( $product_id, $product_data );	
 	}
 	
 	/**

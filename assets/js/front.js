@@ -28,6 +28,7 @@ jQuery(function($){
         $('input[name="cx-accessorie"]:checked').each(function() {
           selectedValues.push($(this).val());
         });
-		console.log( selectedValues );
-      });
+    });
+
+	console.log( $('.woocommerce-Price-amount amount').val() );
 })
