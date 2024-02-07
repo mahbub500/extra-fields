@@ -33,7 +33,7 @@ class Front extends Base {
 
 	public function head() {
 		if( isset( $_POST['extra_fields'] )){
-			Helper::pri( 'test' );
+			Helper::pri( $_POST['extra_fields'] );
 		}	
 	}
 	
@@ -74,20 +74,20 @@ class Front extends Base {
 			<button class="cx-extra-button-1">Extra Fileds*  </button>
 
 			<div class="cx-extra-item-1"> 
-				<input type="radio"  name="extra_fields" value ='1'>
-				<label for="">Item One <span class="cx-extra-item-1-span">+2$</span> </label> <br>
-				<input type="radio" name="extra_fields" value ='1'>
-				<label for="">Item One <span class="cx-extra-item-1-span">+2$</span> </label> <br>
-				<input type="radio" name="extra_fields" value ='1'>
-				<label for="">Item One <span class="cx-extra-item-1-span">+2$</span> </label> <br>
+				<input type="radio"  name="extra_fields" class='cx-extra-item-input' value ='2'>
+				<label for="">Item One <span class="cx-extra-item-1-span ">+2$</span> </label> <br>
+				<input type="radio" name="extra_fields" class='cx-extra-item-input' value ='5'>
+				<label for="">Item One <span class="cx-extra-item-1-span ">+5$</span> </label> <br>
+				<input type="radio" name="extra_fields"  class='cx-extra-item-input'value ='10'>
+				<label for="">Item One <span class="cx-extra-item-1-span ">+10$</span> </label> <br>
 			</div>
 
 			<button class="cx-extra-button-2">accessories* </button>
 
 			<div class="cx-extra-item-2"> 
-				<input type="checkbox"  name="accessorie-1" value ='1'>
+				<input type="checkbox"  name="cx-accessorie" value ='55'>
 				<label for="">Long Cable<span class="cx-extra-item-2-span">+55$</span> </label> <br>
-				<input type="checkbox" name="accessories-2" value ='1'>
+				<input type="checkbox" name="cx-accessorie" value ='96'>
 				<label for="">Type-C Cable<span class="cx-extra-item-2-span">+96$</span> </label> <br>
 				
 			</div>
